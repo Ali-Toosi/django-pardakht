@@ -1,16 +1,22 @@
 django-pardakht
 ===============
 
-:What's this?:
+*What's this?*
 
 You can use this app to create payments in your django project via Iranian gateways. (Right now only Zarinpal is available but the rest are coming soon)
 
-:How does it work?:
+*How does it work?*
 
 You ask app for a new payment and it will give you a link on your own site that you can redirect user to it in order to have a payment.
 
+.. image:: http://img.majidonline.com/pic/321293/1.png
 
-:Installation:
+.. image:: http://img.majidonline.com/pic/321294/2.png
+
+.. image:: http://img.majidonline.com/pic/321295/3.png
+
+
+*Installation*
 
 1. `pip install django-pardakht`
 
@@ -34,7 +40,7 @@ You ask app for a new payment and it will give you a link on your own site that 
 5. For any gateway you use, add GATEWAY_MERCHANT_ID in your project settings. For example if you are going to use zarinpal, You need to add `ZARINPAL_MERCHANT_ID` in your settings with value set to your zarinpal merchant ID.
 
 
-:Usage:
+*Usage*
 
 Every payment you create takes 5 parameters.
 
@@ -42,9 +48,7 @@ Every payment you create takes 5 parameters.
 
 2. `description`:  Short description about this payment. Necessary for some gateways such as Zarinpal.
 
-3. `return_function`:  A callable object (function) that will get called after payment is
-
- done with the payment object as it's input. It's optional and can be None.
+3. `return_function`:  A callable object (function) that will get called after payment is done with the payment object as it's input. It's optional and can be None.
 
 4. `return_url`:  A url for user to come back where he left off on your site. It's optional and can be None.
 
@@ -70,7 +74,7 @@ This will create a payment and returns a dict containing payment object and a li
     result['payment']   #  Created payment object
     result['link']      #  Link for paying this payment that you should redirect your user to
 
-:Extra notes:
+*Extra notes*
 
 This app handles all steps of payment including UI parts.
 
