@@ -1,4 +1,4 @@
-nclude LICENSE
-include README.md
+include LICENSE
+include README.rst
 recursive-include pardakht/static *
 recursive-include pardakht/templates *
