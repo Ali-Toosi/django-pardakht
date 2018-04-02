@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-pardakht',
-    version='1.2',
+    version='1.3',
     packages=find_packages(),
     include_package_data=True,
     license='MIT License',  # example license
@@ -31,9 +31,9 @@ setup(
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
+	install_requires = [
+		'django-extensions==1.9.8',
+		'zeep==2.5.0'
+	]
 )
 
-dependencies = [
-	'django-extensions==1.9.8',
-	'zeep==2.5.0'
-]
