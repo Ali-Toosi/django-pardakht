@@ -18,13 +18,13 @@ You ask app for a new payment and it will give you a link on your own site that 
 
 *Installation*
 
-1. `pip install django-pardakht`
+1. ``pip install django-pardakht``
 
-2. Add `pardakht` to your `INSTALLED_APPS`
+2. Add ``pardakht`` to your ``INSTALLED_APPS``
 
-3. Migrate `python manage.py migrate`
+3. ``python manage.py migrate``
 
-4. Add `pardakht` urls to your project's urls.
+4. Add ``pardakht`` urls to your project's urls.
 
 ::
 
@@ -37,22 +37,22 @@ You ask app for a new payment and it will give you a link on your own site that 
         ...
     ]
 
-5. For any gateway you use, add GATEWAY_MERCHANT_ID in your project settings. For example if you are going to use zarinpal, You need to add `ZARINPAL_MERCHANT_ID` in your settings with value set to your zarinpal merchant ID.
+5. For any gateway you use, add GATEWAY_MERCHANT_ID in your project settings. For example if you are going to use zarinpal, You need to add ``ZARINPAL_MERCHANT_ID`` in your settings with value set to your zarinpal merchant ID.
 
 
 *Usage*
 
 Every payment you create takes 5 parameters.
 
-1. `price`:  Price of the payment.
+1. ``price``:  Price of the payment.
 
-2. `description`:  Short description about this payment. Necessary for some gateways such as Zarinpal.
+2. ``description``:  Short description about this payment. Necessary for some gateways such as Zarinpal.
 
-3. `return_function`:  A callable object (function) that will get called after payment is done with the payment object as it's input. It's optional and can be None.
+3. ``return_function``:  A callable object (function) that will get called after payment is done with the payment object as it's input. It's optional and can be None.
 
-4. `return_url`:  A url for user to come back where he left off on your site. It's optional and can be None.
+4. ``return_url``:  A url for user to come back where he left off on your site. It's optional and can be None.
 
-5. `login_required`:  Must be True if user who is paying should be authenticated. If you're going to use this you have to set LOGIN_URL in project settings.
+5. ``login_required``:  Must be True if user who is paying should be authenticated. If you're going to use this you have to set LOGIN_URL in project settings.
 
 To create a payment:
 
