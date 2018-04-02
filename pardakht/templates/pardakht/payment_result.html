@@ -1,0 +1,40 @@
+{% extends 'pardakht/base.html' %}
+
+{% block container %}
+    <div class="ui fluid raised blue segment">
+        <div class="ui header">
+            نتیجه پرداخت
+        </div>
+        <div class="ui relaxed divided list">
+            <div class="item">
+                <i class="large money bill alternate outline middle aligned icon"></i>
+                <div class="content">
+                    <a class="header">مبلغ پرداخت</a>
+                    <div class="description" style="margin-top: 7px;">{{ payment.price }} تومان</div>
+                </div>
+            </div>
+            <div class="item">
+                <i class="large file outline middle aligned icon"></i>
+                <div class="content">
+                    <a class="header">توضیحات پرداخت</a>
+                    <div class="description" style="margin-top: 7px;">{{ payment.description }}</div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <div class="header">شماره پیگیری</div>
+                    <div class="description" style="margin-top: 7px;">{{ payment.trace_number }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="ui {% if payment.successful %}green{% else %}red{% endif %} message">
+            پرداخت با موفقیت انجام {% if payment.successful %}شد!{% else %}نشد {% endif %}
+        </div>
+        {% if payment.return_url is not None %}
+            <a class="ui blue labeled icon button" href="{{ payment.return_url }}">
+                <i class="right arrow icon"></i>
+            بازگشت
+            </a>
+        {% endif %}
+    </div>
+{% endblock %}

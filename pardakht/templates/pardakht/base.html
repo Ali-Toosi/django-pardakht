@@ -1,0 +1,31 @@
+{% load static %}
+{% load i18n %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <title>پرداخت</title>
+    <meta content="text/html" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link
+            rel="stylesheet"
+            href="{% if LANGUAGE_BIDI %}{% static 'pardakht/semantic/semantic.rtl.min.css' %}{% else %}{% static 'pardakht/semantic/semantic.min.css' %}{% endif %}"
+    >
+    <link rel="stylesheet" href="{% static 'pardakht/css/styles.css' %}">
+    <script src="{% static 'pardakht/js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'pardakht/semantic/semantic.min.js' %}"></script>
+    <script src="{% static 'pardakht/js/scripts.js' %}"></script>
+
+    {% block extra_header %}{% endblock %}
+</head>
+<body {% if LANGUAGE_BIDI %}dir="rtl"{% endif %} style="background-color: #ebebeb">
+    {% block body %}
+        <div class="ui container" style="margin-top: 2em; width: 60vw;">
+            {% block container %}
+            {% endblock %}
+        </div>
+    {% endblock %}
+</body>
+</html>
+

@@ -1,0 +1,4 @@
+nclude LICENSE
+include README.md
+recursive-include pardakht/static *
+recursive-include pardakht/templates *

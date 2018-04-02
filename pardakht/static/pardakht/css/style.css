@@ -1,0 +1,7 @@
+@font-face {
+	font-family: BRoya;
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/BRoya/BRoya.eot");
+	src: url("../fonts/BRoya/BRoya.eot?#iefix") format('embedded-opentype'), /* IE6-8 */ url("../fonts/BRoya/BRoya.woff") format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("../fonts/BRoya/BRoya.ttf") format('truetype');
+}

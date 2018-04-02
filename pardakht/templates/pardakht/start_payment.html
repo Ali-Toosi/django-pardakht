@@ -1,0 +1,34 @@
+{% extends 'pardakht/base.html' %}
+
+{% block container %}
+    <div class="ui fluid raised blue segment">
+        <div class="ui header">
+            اطلاعات پرداخت
+        </div>
+        <div class="ui relaxed divided list">
+            <div class="item">
+                <i class="large money bill alternate outline middle aligned icon"></i>
+                <div class="content">
+                    <a class="header">مبلغ پرداخت</a>
+                    <div class="description" style="margin-top: 7px;">{{ payment.price }} تومان </div>
+                </div>
+            </div>
+            <div class="item">
+                <i class="large file outline middle aligned icon"></i>
+                <div class="content">
+                    <a class="header">توضیحات پرداخت</a>
+                    <div class="description" style="margin-top: 7px;">{{ payment.description }}</div>
+                </div>
+            </div>
+        </div>
+        <div>
+            {% for gateway in gateways %}
+                <a class="ui large blue button" href="{% url 'pardakht:select_gateway' payment.slug gateway.name %}">
+                    پرداخت از طریق {{ gateway.display_name }}
+                </a>
+                {% empty %}
+                درگاهی تعریف نشده است!
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

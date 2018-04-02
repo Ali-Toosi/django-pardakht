@@ -1,0 +1,1 @@
+actives = ['zarinpal']
