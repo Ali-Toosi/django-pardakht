@@ -9,10 +9,10 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-pardakht',
-    version='1.3',
+    version='1.3.3',
     packages=find_packages(),
     include_package_data=True,
-    license='MIT License',  # example license
+    license='MIT License', 
     description='Django app for connecting to Iranian payment gateways.',
     long_description=README,
     url='https://www.github.com/ARKhoshghalb/django-pardakht',
@@ -21,9 +21,10 @@ setup(
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
-        'Framework :: Django :: 1.11',  # replace "X.Y" as appropriate
+        'Framework :: Django :: 1.11',
+		'Framework :: Django :: 2.0',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',  # example license
+        'License :: OSI Approved :: MIT License', 
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3.5',

@@ -7,7 +7,7 @@ You can use this app to create payments in your django project via Iranian gatew
 
 **How does it work?**
 
-You ask app for a new payment and it will give you a link on your own site that you can redirect user to it in order to have a payment.
+You ask the app for a new payment and it will give you a link on your own site that you can redirect users to it in order to have a payment.
 
 .. image:: http://img.majidonline.com/pic/321293/1.png
 

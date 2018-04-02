@@ -29,7 +29,7 @@ class Payment(models.Model):
     gateway = models.CharField(max_length=256, null=True)
     description = models.CharField(max_length=1024, null=True)
     login_required = models.BooleanField(default=False)
-    user = models.ForeignKey(User, null=True, blank=True)
+    user = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
     ref_number = models.CharField(max_length=200, null=True, unique=True)
 
     # Returning user to your website
@@ -42,3 +42,6 @@ class Payment(models.Model):
 
     def successful(self):
         return self.state == self.STATE_SUCCESS
+
+    class Meta:
+        app_label = 'pardakht'
