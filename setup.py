@@ -33,7 +33,7 @@ setup(
     ],
 )
 
-install_requires = [
+dependencies = [
 	'django-extensions==1.9.8',
 	'zeep==2.5.0'
 ]
