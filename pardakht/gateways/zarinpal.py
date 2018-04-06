@@ -1,3 +1,5 @@
+# set ZARINPAL_MERCHANT_ID and ZARIPAL_USE_ZARINGATE (optional) in your project settings
+
 from django.http import HttpRequest
 from zeep import Client
 from django.conf import settings
@@ -14,7 +16,12 @@ logger = logging.getLogger(__name__)
 
 
 def redirect_url(payment):
-    return "https://www.zarinpal.com/pg/StartPay/{}".format(payment.token)
+    try:
+        zarin_gate = "ZarinGate" if settings.ZARINPAL_USE_ZARINGATE else ""
+    except AttributeError:
+        zarin_gate = ""
+
+    return "https://www.zarinpal.com/pg/StartPay/{}/{}".format(payment.token, zarin_gate)
 
 
 def redirect_data(payment):

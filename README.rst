@@ -81,3 +81,10 @@ This app handles all steps of payment including UI parts.
 It uses semantic-ui so if you want to use it you need to serve app's static files.
 
 But of course you can override templates to use your own templates with your own UI design.
+
+
+**Configurations**
+
+If you are using ZarinGate to send users directly to the bank payment page, set `ZARINPAL_USE_ZARINGATE` to `True` in your project settings.
+
+
