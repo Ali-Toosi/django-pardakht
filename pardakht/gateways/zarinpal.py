@@ -24,7 +24,7 @@ def redirect_url(payment):
     return "https://www.zarinpal.com/pg/StartPay/{}/{}".format(payment.token, zarin_gate)
 
 
-def redirect_data(payment):
+def redirect_data(request:HttpRequest, payment):
     return {}
 
 
