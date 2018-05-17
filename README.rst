@@ -3,7 +3,7 @@ django-pardakht
 
 **What's this?**
 
-You can use this app to create payments in your django project via Iranian gateways. (Right now only Zarinpal is available but the rest are coming soon)
+You can use this app to create payments in your django project via Iranian gateways. (Right now only Zarinpal and Saman are available but the rest are coming soon)
 
 **How does it work?**
 
@@ -37,12 +37,12 @@ You ask the app for a new payment and it will give you a link on your own site t
         ...
     ]
 
-5. For any gateway you use, add GATEWAY_MERCHANT_ID in your project settings. For example if you are going to use zarinpal, You need to add ``ZARINPAL_MERCHANT_ID`` in your settings with value set to your zarinpal merchant ID.
+5. For any gateway you use, add GATEWAY_MERCHANT_ID in your project settings. For example if you are going to use zarinpal, You need to add ``ZARINPAL_MERCHANT_ID`` in your settings with value set to your zarinpal merchant ID or if you are using saman gateway, You need to add ``SAMAN_MERCHANT_ID`` in your settings.
 
 
 **Usage**
 
-Every payment you create takes 5 parameters.
+There is a payment model that app uses to handle payments. Every payment you create needs 5 initial parameters.
 
 1. ``price``:  Price of the payment.
 
