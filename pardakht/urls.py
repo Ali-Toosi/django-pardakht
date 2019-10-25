@@ -1,9 +1,9 @@
-from django.conf.urls import url
+from django.urls import path
 from . import views
 
 app_name = 'pardakht'
 urlpatterns = [
-    url(r'^p/(?P<slug>\w+)/$', views.start_payment, name='start_payment'),
-    url(r'^t/(?P<slug>\w+)/(?P<gateway>\w+)/$', views.select_gateway, name='select_gateway'),
-    url(r'^r/(?P<slug>\w+)/(?P<gateway>\w+)', views.called_back, name='callback_url')
+    path('p/<slug>/', views.start_payment, name='start_payment'),
+    path('t/<slug>/<gateway>/', views.select_gateway, name='select_gateway'),
+    path('r/<slug>/<gateway>', views.called_back, name='callback_url')
 ]
