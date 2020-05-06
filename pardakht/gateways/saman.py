@@ -47,6 +47,13 @@ def get_token(request: HttpRequest, payment):
         0, 0, 0, 0, 0, 0, "", "", 0
     )
     if result not in [None, '']:
+        try:
+            int_token = int(result)
+            if int_token < 0:
+                logger.error("Gateway returned error code {} while requesting for token".format(result))
+                return None
+        except ValueError:
+            pass
         payment.gateway = name
         payment.save()
         return result

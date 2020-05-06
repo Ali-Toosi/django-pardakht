@@ -9,14 +9,14 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-pardakht',
-    version='1.4.1',
+    version='1.4.2',
     packages=find_packages(),
     include_package_data=True,
     license='MIT License', 
     description='Django app for connecting to Iranian payment gateways.',
     long_description=README,
-    url='https://www.github.com/ARKhoshghalb/django-pardakht',
-    author='Alireza Khoshghalb',
+    url='https://www.github.com/Ali-Toosi/django-pardakht',
+    author='Ali Toosi',
     author_email='alirezakhoshghalb@ymail.com',
     classifiers=[
         'Environment :: Web Environment',
